@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>One Stop Stream Shop (OSSS)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">OSSS</div>
+        <div class="brand-text">
+          <h1>One Stop Stream Shop</h1>
+          <p class="tagline">Find where to watch — across streaming services, in one place.</p>
+        </div>
+      </div>
+
+      <div class="credit">
+        <span>Created by</span>
+        <strong>Parth Pankaj Bakhda</strong>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <h2>Search once. Stream anywhere.</h2>
+          <p class="subtext">
+            OSSS is a concept for a universal streaming hub that helps you search for shows and movies
+            (like <span class="pill">Suits</span>) and instantly see where you can watch — across platforms.
+          </p>
+
+          <div class="search-card" aria-label="Search for a show or movie">
+            <form id="searchForm" class="search-row">
+              <input
+                id="queryInput"
+                type="text"
+                placeholder="Search a title (try: Suits, The Office, Avatar)..."
+                autocomplete="off"
+                aria-label="Search input"
+              />
+              <button type="submit" class="btn-primary">Search</button>
+            </form>
+
+            <div class="search-meta">
+              <span class="note">
+                Demo mode: results use a sample catalog. Later, you can connect to a real streaming API.
+              </span>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn-secondary" href="#how">How it works</a>
+            <a class="btn-ghost" href="#vision">Vision</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="stats-card">
+            <h3>Why OSSS?</h3>
+            <ul>
+              <li><strong>1 search</strong> across many platforms</li>
+              <li><strong>1 watchlist</strong> to keep it organized</li>
+              <li><strong>Less time</strong> switching between apps</li>
+            </ul>
+
+            <div class="services">
+              <span class="service-chip">Netflix</span>
+              <span class="service-chip">Apple TV</span>
+              <span class="service-chip">Tubi</span>
+              <span class="service-chip">Pluto TV</span>
+              <span class="service-chip">Prime Video</span>
+              <span class="service-chip">Hulu</span>
+              <span class="service-chip">Disney+</span>
+              <span class="service-chip">Max</span>
+              <span class="service-chip">Peacock</span>
+              <span class="service-chip">Paramount+</span>
+            </div>
+
+            <p class="small">
+              (These are examples. OSSS aims to support every available service.)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section class="results-section">
+      <div class="container">
+        <div class="results-header">
+          <h2>Search Results</h2>
+          <p id="resultsHint" class="muted">Type a title and press Search.</p>
+        </div>
+
+        <div id="results" class="results-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="info-section">
+      <div class="container">
+        <h2>How OSSS works (MVP concept)</h2>
+
+        <div class="cards-3">
+          <div class="info-card">
+            <h3>1) Search a title</h3>
+            <p>Enter a show or movie name and let OSSS look it up.</p>
+          </div>
+          <div class="info-card">
+            <h3>2) See where to watch</h3>
+            <p>OSSS shows platforms and direct links (when available).</p>
+          </div>
+          <div class="info-card">
+            <h3>3) Save to your watchlist</h3>
+            <p>Keep everything organized across services in one place.</p>
+          </div>
+        </div>
+
+        <p class="muted">
+          In a real app, this connects to an official content database / streaming availability API
+          and shows accurate results by country/region.
+        </p>
+      </div>
+    </section>
+
+    <!-- Vision -->
+    <section id="vision" class="info-section alt">
+      <div class="container">
+        <h2>Vision</h2>
+        <p class="lead">
+          OSSS becomes the “home screen” for streaming — search, discover, track, and launch content
+          without jumping between apps.
+        </p>
+
+        <div class="bullets">
+          <div>
+            <h3>Future features</h3>
+            <ul>
+              <li>Universal Watchlist + Continue Watching</li>
+              <li>Cheapest way to watch (rent, buy, stream)</li>
+              <li>Subscription manager</li>
+              <li>AI recommendations across all services</li>
+              <li>Family profiles & parental controls</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Built for simplicity</h3>
+            <ul>
+              <li>Clean UI</li>
+              <li>Fast search</li>
+              <li>Works on mobile & desktop</li>
+              <li>Easy to expand into a full app later</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="footer-brand">
+            <div class="logo sm">OSSS</div>
+            <div>
+              <strong>One Stop Stream Shop</strong>
+              <div class="muted">A universal streaming hub concept.</div>
+            </div>
+          </div>
+          <div class="muted small">
+            © <span id="year"></span> OSSS. Created by <strong>Parth Pankaj Bakhda</strong>.
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="#how">How it works</a>
+          <a href="#vision">Vision</a>
+          <a href="#" id="backToTop">Back to top</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
